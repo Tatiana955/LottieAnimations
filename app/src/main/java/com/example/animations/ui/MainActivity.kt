@@ -1,4 +1,4 @@
-package com.example.animations
+package com.example.animations.ui
 
 import android.os.Bundle
 import android.view.WindowManager
@@ -8,7 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
-import com.example.animations.ui.screens.start.StartScreen
+import com.example.animations.ui.screens.AppScreen
 import com.example.animations.ui.theme.AnimationsTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    StartScreen()
+                    AppScreen()
                 }
             }
         }
