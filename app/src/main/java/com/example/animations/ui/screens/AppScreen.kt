@@ -16,7 +16,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
-import com.example.animations.AppNavHost
+import com.example.animations.NavGraph
 import com.example.animations.domain.util.NavItems
 import com.example.animations.ui.theme.Yellow
 import com.example.animations.ui.theme.LightGray
@@ -77,7 +77,7 @@ fun AppScreen() {
             }
         },
         content = { paddingValues ->
-            AppNavHost(
+            NavGraph(
                 paddingValues = paddingValues,
                 navController = navController
             )

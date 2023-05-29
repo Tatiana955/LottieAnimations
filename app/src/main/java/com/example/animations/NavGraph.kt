@@ -7,6 +7,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import com.example.animations.domain.util.NavItems
 import com.example.animations.ui.screens.chameleon.ChameleonScreen
+import com.example.animations.ui.screens.list.ListScreen
 import com.example.animations.ui.screens.start.StartScreen
 
 @Composable
@@ -22,7 +23,7 @@ fun NavGraph(
             StartScreen()
         }
         composable(NavItems.List.route) {
-//            ListScreen()
+            ListScreen()
         }
         composable(NavItems.Chameleon.route) {
             ChameleonScreen()
