@@ -63,11 +63,11 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
 
     // Lottie
-    implementation "com.airbnb.android:lottie-compose:$lottieVersion"
+    implementation "com.airbnb.android:lottie-compose:$lottie_version"
 
     // Animated Navigation Bar
-    implementation("com.exyte:animated-navigation-bar:1.0.0")
+    implementation "com.exyte:animated-navigation-bar:$animated_navigation_bar_version"
 
     // Compose Animated List
-    implementation 'com.github.SmartToolFactory:Compose-AnimatedList:0.5.1'
+    implementation "com.github.SmartToolFactory:Compose-AnimatedList:$animated_list_version"
 }
