@@ -29,7 +29,7 @@ import com.exyte.animatednavbar.animation.indendshape.shapeCornerRadius
 fun AppScreen() {
     val navController = rememberNavController()
     val navBarItems = remember { NavItems.values() }
-    var selectedIndex by remember { mutableStateOf(0) }
+    var selectedIndex by remember { mutableIntStateOf(0) }
 
     val infiniteTransition = rememberInfiniteTransition()
     val color by infiniteTransition.animateColor(
@@ -41,7 +41,8 @@ fun AppScreen() {
                 easing = LinearEasing
             ),
             repeatMode = RepeatMode.Reverse
-        )
+        ),
+        label = "animated color of bottom bar"
     )
 
     Scaffold(
