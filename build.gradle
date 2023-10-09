@@ -1,7 +1,7 @@
 buildscript {
     ext {
         compose_ui_version = '1.5.1'
-        nav_version = '2.5.3'
+        nav_version = '2.7.4'
         lottie_version = '6.0.0'
         animated_navigation_bar_version = '1.0.0'
         animated_list_version = '0.5.1'

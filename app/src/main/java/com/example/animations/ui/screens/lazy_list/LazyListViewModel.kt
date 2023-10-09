@@ -34,7 +34,7 @@ class LazyListViewModel : ViewModel() {
     fun addItem() {
         val newIndex = if (_listItems.isEmpty()) 0 else _listItems.maxOf { it.id } + 1
         _listItems.add(
-            index = Random.nextInt(_listItems.size),
+            index = if (newIndex != 0) Random.nextInt(_listItems.size) else 0,
             element = newItem(newIndex)
         )
     }

@@ -142,7 +142,7 @@ private fun DrawerItems(
     scaffoldState: ScaffoldState,
     navController: NavController,
 ) {
-    val items = listOf(NavItems.LazyList)
+    val items = listOf(NavItems.LazyColumn, NavItems.LazyRow)
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()
 
