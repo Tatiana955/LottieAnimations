@@ -17,7 +17,7 @@ class LazyListViewModel : ViewModel() {
         Blue
     )
 
-    private val listOfItems = List(10) { newItem(it) }
+    private val listOfItems = List(9) { newItem(it) }
     private val _listItems: SnapshotStateList<Item> = listOfItems.toMutableStateList()
     val listItems: SnapshotStateList<Item> = _listItems
 

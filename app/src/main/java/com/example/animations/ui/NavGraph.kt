@@ -1,4 +1,4 @@
-package com.example.animations
+package com.example.animations.ui
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.runtime.Composable
@@ -8,6 +8,7 @@ import androidx.navigation.compose.composable
 import com.example.animations.domain.util.NavItems
 import com.example.animations.ui.screens.chameleon.ChameleonScreen
 import com.example.animations.ui.screens.lazy_list.screens.column.LazyColumnScreen
+import com.example.animations.ui.screens.lazy_list.screens.grid.LazyGridScreen
 import com.example.animations.ui.screens.lazy_list.screens.row.LazyRowScreen
 import com.example.animations.ui.screens.list.ListScreen
 import com.example.animations.ui.screens.start.StartScreen
@@ -38,6 +39,11 @@ fun NavGraph(
         }
         composable(NavItems.LazyRow.route) {
             LazyRowScreen(
+                paddingValues = paddingValues
+            )
+        }
+        composable(NavItems.LazyGrid.route) {
+            LazyGridScreen(
                 paddingValues = paddingValues
             )
         }

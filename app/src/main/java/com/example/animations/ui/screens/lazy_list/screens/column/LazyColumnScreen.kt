@@ -8,7 +8,6 @@ import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,22 +18,17 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.snapshots.SnapshotStateList
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.animations.data.models.Item
 import com.example.animations.ui.screens.lazy_list.LazyListViewModel
 import com.example.animations.ui.screens.lazy_list.components.ActionButton
+import com.example.animations.ui.screens.lazy_list.components.Item
 import com.example.animations.ui.theme.LightGray
 import com.example.animations.ui.theme.Yellow
 
@@ -143,30 +137,9 @@ private fun ItemList(
                             easing = LinearOutSlowInEasing,
                         )
                     )
-                    .fillMaxWidth()
                     .padding(vertical = 8.dp)
                     .height(48.dp),
             )
         }
-    }
-}
-
-@Composable
-private fun Item(
-    modifier: Modifier = Modifier,
-    label: String,
-    color: Color
-) {
-    Box(
-        modifier = modifier
-            .clip(RoundedCornerShape(10.dp))
-            .background(color = color),
-        contentAlignment = Alignment.Center,
-    ) {
-        Text(
-            text = label,
-            style = MaterialTheme.typography.body1,
-            color = Color.White
-        )
     }
 }
