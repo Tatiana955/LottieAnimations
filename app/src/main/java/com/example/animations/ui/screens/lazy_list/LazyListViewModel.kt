@@ -3,6 +3,7 @@ package com.example.animations.ui.screens.lazy_list
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.toMutableStateList
 import androidx.lifecycle.ViewModel
+import com.example.animations.R
 import com.example.animations.data.models.Item
 import com.example.animations.ui.theme.*
 import kotlin.random.Random
@@ -25,6 +26,7 @@ class LazyListViewModel : ViewModel() {
         id = index,
         label = "Item $index",
         color = colors[index % colors.size],
+        imageUrl = R.drawable.ic_launcher_foreground
     )
 
     fun shuffleList() {

@@ -5,5 +5,6 @@ import androidx.compose.ui.graphics.Color
 data class Item(
     val id: Int,
     val label: String,
-    val color: Color,
+    val color: Color = Color.Gray,
+    val imageUrl: Int = 0
 )

@@ -25,7 +25,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.animations.data.models.Item
 import com.example.animations.ui.screens.lazy_list.LazyListViewModel
 import com.example.animations.ui.screens.lazy_list.components.ActionButton
-import com.example.animations.ui.screens.lazy_list.components.Item
+import com.example.animations.ui.screens.lazy_list.components.ItemBox
 import com.example.animations.ui.theme.LightGray
 
 @Composable
@@ -87,7 +87,7 @@ private fun ItemList(
     Column(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Item(
+        ItemBox(
             modifier = modifier
                 .padding(bottom = 20.dp),
             label = "Lazy Vertical Grid",
@@ -105,7 +105,7 @@ private fun ItemList(
                 items = listItems,
                 key = { it.id }
             ) { item ->
-                Item(
+                ItemBox(
                     label = item.label,
                     color = item.color,
                     modifier = modifier
@@ -117,7 +117,7 @@ private fun ItemList(
             }
         }
 
-        Item(
+        ItemBox(
             modifier = modifier
                 .padding(bottom = 20.dp),
             label = "Lazy Horizontal Grid",
@@ -132,7 +132,7 @@ private fun ItemList(
             horizontalArrangement = Arrangement.spacedBy(space = 8.dp)
         ) {
             items(items = listItems) { item ->
-                Item(
+                ItemBox(
                     label = item.label,
                     color = item.color,
                     modifier = modifier
