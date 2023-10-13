@@ -6,6 +6,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import com.example.animations.domain.util.NavItems
+import com.example.animations.ui.screens.carusel_card.CarouselCardSliderScreen
 import com.example.animations.ui.screens.chameleon.ChameleonScreen
 import com.example.animations.ui.screens.lazy_list.screens.column.LazyColumnScreen
 import com.example.animations.ui.screens.lazy_list.screens.grid.LazyGridScreen
@@ -44,6 +45,12 @@ fun NavGraph(
         }
         composable(NavItems.LazyGrid.route) {
             LazyGridScreen(
+                paddingValues = paddingValues
+            )
+        }
+
+        composable(NavItems.HorizontalPager.route) {
+            CarouselCardSliderScreen(
                 paddingValues = paddingValues
             )
         }
